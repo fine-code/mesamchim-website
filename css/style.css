@@ -1,0 +1,98 @@
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, small {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent; }
+html {
+    box-sizing: border-box;
+}
+body {
+    background-color: #e5e5e5;
+    font : normal 16px Verdana, Tahoma, sans-serif;
+    line-height: 1.6em; 
+    margin: 0 auto;
+    padding: 0px;
+    width: 100%;
+    max-width:960px;
+}
+h1 {
+    color: #fda5b4;
+    text-align: center;
+}
+h3 {
+    background: #ca8490;
+    color: white;
+    text-align: center;
+    font : normal 24px Verdana, Tahoma, sans-serif; 
+}
+p {
+    color:#262626;
+    font-family: Verdana, Tahoma, sans-serif, helvetica; 
+    font-size: 1.5em;
+    text-align: center;
+} 
+.header {
+    width: 100%;
+    height: 60px;
+    padding: 50px;
+    background: #f8f8f8;
+    color: black;
+    font: normal, 30px, Verdana, Tahoma, sans-serif; 
+    text-align: center;
+}
+nav {
+    width: 100%;
+    margin: 20px 0;
+}
+nav ul {
+    width: 100%;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+nav ul li {
+    width: 25%;
+}
+nav ul li a {
+    display:block;
+    width:100%;
+}
+/** ul.topnav {
+    width:100%;
+    list-style-type:none; removes the bullets from the list
+    text-align: center;
+    margin: 0; /**remove broswer default settings
+    padding: 0;  /**remove broswer default settings
+    overflow: hidden;
+    background-color: #fb5a76;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+ul.topnav li a {
+    display: block;
+    color: #fda5b4;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+ul.topnav li a:hover:not(.active) {
+    background-color: white;
+    color: black;
+}
+
+ul.topnav li a.active  {
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    ul.topnav li {
+        float: none;
+    }
+} **/
