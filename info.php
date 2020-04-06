@@ -1,9 +1,8 @@
 <?php include "header.php"; ?>
 <div class="container-fluid">
-
-<div class="panel-heading">
-    <h2>About Us</h2>
-</div>
+    <div class="panel-heading">
+        <h2>About Us</h2>
+    </div>
 </div>
 <div class="container-fluid">
     <div class="panel-body">
