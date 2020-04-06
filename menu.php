@@ -10,13 +10,13 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="info.php">Discover</a></li>
-        <li><a href="reservationForm.php">Reserve</a></li>
-        <li><a href="contact.php">Contact</a></li>
+        <li class="navbar-item"><a href="info.php">Discover</a></li>
+        <li class="navbar-item"><a href="reservationForm.php">Reserve</a></li>
+        <li class="navbar-item"><a href="contact.php">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li class="navbar-item"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li class="navbar-item"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
