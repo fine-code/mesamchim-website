@@ -4,7 +4,7 @@
         <h2>Contact Us</h2>
     </div>
 </div>
-<div class="container-fluid fixed-height">
+<div class="container-fluid">
     <div class="panel-body">
         <div class="panel-body">
             <p>Give us a call, send us a message, or use the form below to discover more about our unique wedding shtick!</p>
