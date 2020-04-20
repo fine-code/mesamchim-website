@@ -12,11 +12,11 @@
       <ul class="nav navbar-nav">
         <li class="navbar-item"><a href="info.php">Discover</a></li>
         <li class="navbar-item"><a href="reservationForm.php">Reserve</a></li>
-        <li class="navbar-item"><a href="contact.php">Contact</a></li>
+        <li class="navbar-item"><a href="contactForm.php">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="navbar-item"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li class="navbar-item"><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li class="navbar-item"><a href="loginForm.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
