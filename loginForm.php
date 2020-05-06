@@ -1,29 +1,54 @@
 <?php
 
-    include "header.php";
+session_start();
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $error = "";
-    $success = "";
+include "header.php";
 
-    if (isset($_POST['submit_button'])) {
-        if ($username == "admin") {
-            if ($password == "password") {
-                $error = "";
-                $success = "Welcome $username!";
-                $_SESSION['username'] = $username;
-                //redirect to private page
-                header("Location: welcome.php");
-            } else {
-                $error = "Invalid Password";
-                $success = "";
-            }
+$error = "";
+
+$accounts = array(
+    'admin' => 'password',
+    'customer' => 'password1'
+);
+
+
+if (isset($_POST['submit_button'])) {
+        $username = isset($_POST['username']) ? $_POST['username'] : '';
+        $password = isset($_POST['password']) ? $_POST['password'] : '';
+        
+        if (!isset($accounts[$username]) or $accounts[$username] != $password) {
+            $error = "Invalid Username or Password";
+            $_SESSION['LoggedIn'] = 'FALSE';
         } else {
-            $error = "Invalid Username";
-            $success = "";
-        }
-    }
+            $error = "";
+            $_SESSION['LoggedIn'] = 'TRUE';
+            $_SESSION['username'] = $username;
+
+            if (isset($_POST['remember_me'])) {
+                setcookie('user_login', 
+                $username);
+            }
+            //redirect to private page
+            header("Location: login.php");
+            exit();
+            // }
+
+
+            // if ($username == "admin") {
+            //     if ($password == "password") {
+            //         $error = "";
+            //         $success = "Welcome $username!";
+            //         $_SESSION['username'] = $username;
+            //         //redirect to private page
+            //         header("Location: login.php");
+            //         exit();
+        } 
+        // } else {
+        //     $error = "Invalid Username";
+        //     $success = "";
+    
+}
+
 
 ?>
 
@@ -40,15 +65,8 @@
     </p>
 </div>
 <div class="container-fluid">
-    <p class="success">
-        <?php
-        echo $success;
-        ?>
-    </p>
-</div>
-<div class="container-fluid">
     <div class="panel-body">
-        <form class="form-horizontal" action="login.php" method="post">
+        <form class="form-horizontal" method="post">
 
             <div class="form-group">
                 <label class="control-label col-sm-2" for="uname"><b>Username</b></label>
@@ -61,7 +79,7 @@
             </div>
 
             <div class="form-group">
-                <input type="checkbox" checked="checked" name="remember">
+                <input type="checkbox" checked="checked" name="remember_me">
                 <label class="control-label col-sm-2"> Remember me</label>
             </div>
             <div class="form-group">
@@ -77,11 +95,5 @@
         </form>
     </div>
 </div>
-
-<?php
-
-//save the cookie if the Remember Me checkbox is checked
-
-?>
 
 <?php include "footer.php"; ?>
