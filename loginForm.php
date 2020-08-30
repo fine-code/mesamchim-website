@@ -24,10 +24,12 @@ if (isset($_POST['submit_button'])) {
             $_SESSION['LoggedIn'] = 'TRUE';
             $_SESSION['username'] = $username;
 
-            if (isset($_POST['remember_me'])) {
-                setcookie('user_login', 
-                $username);
-            }
+            $login_cookie_expiration = isset($_POST['remember_me']) ? time()+60*60*24*30 : 0;
+
+            setcookie('user_login', 
+                        $username,
+                        $login_cookie_expiration);
+
             //redirect to private page
             header("Location: login.php");
             exit();
