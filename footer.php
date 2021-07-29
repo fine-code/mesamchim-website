@@ -1,4 +1,4 @@
-    <div class="navbar navbar-inner  navbar-fixed-bottom">
+    <div class="navbar navbar-inner">
         <footer>
             <div class="panel-footer fixed-bottom">
                 <h3>Mesamchim Wedding Shtick Gemach</h3>
