@@ -2,6 +2,8 @@ CREATE TABLE product (
     id VARCHAR(64) NOT NULL, 
     date_created DATETIME NOT NULL,
     date_deleted DATETIME NOT NULL, 
+    name VARCHAR(64) NOT NULL, 
+    description VARCHAR(500) NOT NULL, 
     color VARCHAR(32) NOT NULL, 
     price DOUBLE NOT NULL,
     PRIMARY KEY(id)
