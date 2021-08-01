@@ -7,7 +7,7 @@ CREATE TABLE product (
     color VARCHAR(32) NOT NULL, 
     price DOUBLE NOT NULL,
     PRIMARY KEY(id)
-)
+) ENGINE = INNODB;
 CREATE TABLE orders (
     id VARCHAR(64) NOT NULL,
     user_id VARCHAR(64) NOT NULL,
