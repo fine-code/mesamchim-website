@@ -1,3 +1,11 @@
+CREATE TABLE product (
+    id VARCHAR(64) NOT NULL, 
+    date_created DATETIME NOT NULL,
+    date_deleted DATETIME NOT NULL, 
+    color VARCHAR(32) NOT NULL, 
+    price DOUBLE NOT NULL,
+    PRIMARY KEY(id)
+)
 CREATE TABLE orders (
     id VARCHAR(64) NOT NULL,
     user_id VARCHAR(64) NOT NULL,
@@ -31,7 +39,7 @@ CREATE TABLE cart_items(
     date_created DATETIME NOT NULL,
     date_deleted DATETIME NULL,
     FOREIGN KEY(cart_id) REFERENCES cart(id),
-    FOREIGN KEY(product_id) REFERENCES product(id)
+    FOREIGN KEY(product_id) REFERENCES PRODUCT(id)
 ) ENGINE = INNODB;
 
 CREATE TABLE order_details(
@@ -42,5 +50,5 @@ CREATE TABLE order_details(
     date_created DATETIME NOT NULL,
     date_deleted DATETIME NULL,
     FOREIGN KEY(order_id) REFERENCES ORDERs(id),
-    FOREIGN KEY(product_id) REFERENCES product(id)
+    FOREIGN KEY(product_id) REFERENCES PRODUCT(id)
 ) ENGINE = INNODB;
